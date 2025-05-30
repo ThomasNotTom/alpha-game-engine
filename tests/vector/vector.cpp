@@ -111,7 +111,7 @@ TEST_CASE("Vector rotate z works (out-of-place)", "[vector_rot_z, out_of_place]"
 }
 
 // Testing VectorOps::isParallel
-TEST_CASE("Vector parallel check works (in-place)", "[vector_is_parallel]") {
+TEST_CASE("Vector parallel check works", "[vector_is_parallel]") {
     Vector v1 = {1, 1, 1};
     Vector v2 = {2, 2, 2};
     REQUIRE(VectorOps::isParallel(v1, v2));
