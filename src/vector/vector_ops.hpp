@@ -20,4 +20,7 @@ namespace VectorOps {
 
     void rotateZ(const Vector& a, float theta, Vector& out);
     void rotateZ(Vector& a, float theta);
+
+    float lengthSquared(const Vector& a);
+    float length(const Vector& a);
 };
