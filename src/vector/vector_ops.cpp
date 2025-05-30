@@ -3,6 +3,11 @@
 #include "./vector_ops.hpp"
 
 namespace VectorOps {
+    bool _floatClose(float a, float b) {
+        float diff = abs(a - b);
+        return diff <= EPSILON;
+    }
+
     float dotProduct(const Vector& a, const Vector& b) {
         return (a.x * b.x) + (a.y * b.y) + (a.z * b.z);
     };
@@ -148,10 +153,8 @@ namespace VectorOps {
     }
 
     bool isClose(const Vector& a, const Vector& b) {
-        Vector difference;
-        subtract(a, b, difference);
-        return abs(difference.x) <= EPSILON &&
-               abs(difference.y) <= EPSILON &&
-               abs(difference.z) <= EPSILON;
+        return _floatClose(a.x, b.x) &&
+               _floatClose(a.y, b.y) &&
+               _floatClose(a.z, b.z);
     }
 };
