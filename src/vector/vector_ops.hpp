@@ -26,4 +26,7 @@ namespace VectorOps {
 
     void normalise(const Vector& a, Vector& out);
     void normalise(Vector& a);
+
+    bool equals(const Vector& a, const Vector& b);
+    bool isClose(const Vector& a, const Vector& b);
 };
