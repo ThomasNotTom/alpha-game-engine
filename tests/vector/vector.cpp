@@ -50,13 +50,13 @@ TEST_CASE("Vector subtraction works (out-of-place)", "[vector_sub, out_of_place]
 }
 
 // Testing VectorOps::lengthSquared
-TEST_CASE("Vector length squared works (in-place)", "[vector_length_sqrd]") {
+TEST_CASE("Vector length squared works", "[vector_length_sqrd]") {
     const Vector v1 = {2, 3, 6};
     REQUIRE(VectorOps::lengthSquared(v1) == 49);
 }
 
 // Testing VectorOps::length
-TEST_CASE("Vector length works (in-place)", "[vector_length]") {
+TEST_CASE("Vector length works", "[vector_length]") {
     const Vector v1 = {2, 3, 6};
     REQUIRE(VectorOps::length(v1) == 7);
 }
