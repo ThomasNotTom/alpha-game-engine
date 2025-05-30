@@ -28,4 +28,20 @@ namespace VectorOps {
         a.y *= k;
         a.z *= k;
     };
+
+    void crossProduct(const Vector& a, const Vector& b, Vector& out) {
+        out.x = (a.y * b.z) - (a.z * b.y);
+        out.y = (a.z * b.x) - (a.x * b.z);
+        out.z = (a.x * b.y) - (a.y * b.x);
+    };
+
+    void crossProduct(Vector& a, const Vector& b) {
+        float tempX = a.x;
+        float tempY = a.y;
+        float tempZ = a.z;
+
+        a.x = (tempY * b.z) - (tempZ * b.y);
+        a.y = (tempZ * b.x) - (tempX * b.z);
+        a.z = (tempX * b.y) - (tempY * b.x);
+    };
 };
