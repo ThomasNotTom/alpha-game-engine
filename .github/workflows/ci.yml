@@ -15,6 +15,11 @@ jobs:
       - name: Install SDL2
         run: sudo apt-get update && sudo apt-get install -y libsdl2-dev
 
+      - name: Download catch
+        run:
+          wget https://github.com/catchorg/Catch2/releases/download/v3.8.1/catch_amalgamated.hpp ./tests &&
+          wget https://github.com/catchorg/Catch2/releases/download/v3.8.1/catch_amalgamated.cpp ./tests
+
       - name: Set up CMake
         uses: jwlawson/actions-setup-cmake@v1
         with:
