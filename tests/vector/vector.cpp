@@ -131,3 +131,19 @@ TEST_CASE("Vector normalise works (out-of-place)", "[vector_normalise, out_of_pl
     VectorOps::normalise(v1, normalised);
     REQUIRE(VectorOps::isParallel(v1, normalised) && VectorOps::length(normalised) == 1);
 }
+
+// Testing VectorOps::multiply
+TEST_CASE("Vector multiply works (in-place)", "[vector_multiply, in_place]") {
+    Vector v1 = {1, 1, 1};
+    float k = 2;
+    VectorOps::multiply(v1, k);
+    REQUIRE(VectorOps::equals(v1, {2, 2, 2}));
+}
+
+TEST_CASE("Vector multiply works (out-of-place)", "[vector_multiply, out_of_place]") {
+    Vector v1 = {1, 1, 1};
+    float k = 2;
+    Vector scaled;
+    VectorOps::multiply(v1, k, scaled);
+    REQUIRE(VectorOps::equals(scaled, {2, 2, 2}));
+}
