@@ -18,8 +18,8 @@ Find the latest [`Catch2`](https://github.com/catchorg/Catch2/releases) release,
 
 ```Bash
 cd tests
-wget {catch_amalgamation.cpp} .
-wget {catch_amalgamation.hpp} .
+wget {catch_amalgamated.cpp} .
+wget {catch_amalgamated.hpp} .
 ```
 
 Then to run the tests, build with `-DBUILD_TEST=ON`, then run `/alpha/bin/runTests`
