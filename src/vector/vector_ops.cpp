@@ -108,4 +108,12 @@ namespace VectorOps {
         a.x = tempX * cos - tempY * sin;
         a.y = tempX * sin + tempY * cos;
     };
+
+    float lengthSquared(const Vector& a) {
+        return (a.x * a.x) + (a.y * a.y) + (a.z * a.z);
+    }
+
+    float length(const Vector& a) {
+        return sqrtf(lengthSquared(a));
+    };
 };
