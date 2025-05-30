@@ -16,4 +16,16 @@ namespace VectorOps {
         a.y += b.y;
         a.z += b.z;
     };
+
+    void multiply(const Vector& a, float k, Vector& out) {
+        out.x = a.x * k;
+        out.y = a.y * k;
+        out.z = a.z * k;
+    };
+
+    void multiply(Vector& a, float k) {
+        a.x *= k;
+        a.y *= k;
+        a.z *= k;
+    };
 }
