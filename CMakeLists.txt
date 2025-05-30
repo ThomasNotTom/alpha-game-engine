@@ -8,15 +8,26 @@ find_package(SDL2 REQUIRED)
 
 option(BUILD_TESTS "Build test suite" ON)
 
+file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/*.hpp"
+)
+list(FILTER SRC_FILES EXCLUDE REGEX ".*/main\\.cpp$")
+
+
 if(BUILD_TESTS)
     enable_testing()
 
     file(GLOB_RECURSE TEST_FILES CONFIGURE_DEPENDS
-        "${CMAKE_CURRENT_SOURCE_DIR}/tests/*.cpp"
+        "${CMAKE_CURRENT_SOURCE_DIR}/tests/vector/vector.cpp"
     )
 
-
-    add_executable(runTests ${TEST_FILES})
+    add_executable(runTests
+        "${CMAKE_CURRENT_SOURCE_DIR}/tests/catch_amalgamated.hpp"
+        "${CMAKE_CURRENT_SOURCE_DIR}/tests/catch_amalgamated.cpp"
+        ${TEST_FILES}
+        ${SRC_FILES}
+    )
 
     target_include_directories(runTests PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/src
@@ -29,12 +40,7 @@ if(BUILD_TESTS)
         RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 endif()
 
-file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/*.hpp"
-)
-
-add_executable(alpha ${SRC_FILES})
+add_executable(alpha ${SRC_FILES} ${CMAKE_SOURCE_DIR}/src/main.cpp)
 target_link_libraries(alpha PRIVATE SDL2)
 
 set_target_properties(alpha PROPERTIES
