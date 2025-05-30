@@ -3,6 +3,8 @@
 namespace VectorOps {
     const float EPSILON = 0.0001;
 
+    bool _floatClose(float a, float b);
+
     float dotProduct(const Vector& a, const Vector& b);
 
     void add(const Vector& a, const Vector& b, Vector& out);
