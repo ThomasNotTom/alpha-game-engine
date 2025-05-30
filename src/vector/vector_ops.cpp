@@ -1,10 +1,18 @@
-#include <math.h>
+#include <cmath>
 
 #include "./vector_ops.hpp"
 
 namespace VectorOps {
+    /**
+     * @brief Checks whether two floats are within a small amount of each other.
+     *
+     * @param a The first float.
+     * @param b The second float.
+     * @return true The floats are close.
+     * @return false The floats are not close.
+     */
     bool _floatClose(float a, float b) {
-        float diff = abs(a - b);
+        float diff = std::abs(a - b);
         return diff <= EPSILON;
     }
 
