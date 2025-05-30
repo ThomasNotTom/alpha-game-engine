@@ -27,6 +27,13 @@ namespace VectorOps {
         return (a.x * b.x) + (a.y * b.y) + (a.z * b.z);
     };
 
+    /**
+     * @brief Adds two vectors, and places it into another vector.
+     *
+     * @param a The first vector.
+     * @param b The second vector.
+     * @param out The output vector.
+     */
     void add(const Vector& a, const Vector& b, Vector& out) {
         out.x = a.x + b.x;
         out.y = a.y + b.y;
