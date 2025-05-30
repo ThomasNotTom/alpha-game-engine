@@ -1,3 +1,5 @@
+#include <math.h>
+
 #include "./vector_ops.hpp"
 
 namespace VectorOps {
@@ -43,5 +45,67 @@ namespace VectorOps {
         a.x = (tempY * b.z) - (tempZ * b.y);
         a.y = (tempZ * b.x) - (tempX * b.z);
         a.z = (tempX * b.y) - (tempY * b.x);
+    };
+
+    void rotateX(const Vector& a, float theta, Vector& out) {
+        float sin = sinf(theta * M_PI / 180);
+        float cos = cosf(theta * M_PI / 180);
+
+        out.x = a.x;
+        out.y = a.y * cos - a.z * sin;
+        out.z = a.y * sin + a.z * cos;
+    };
+
+    void rotateX(Vector& a, float theta) {
+        float sin = sinf(theta * M_PI / 180);
+        float cos = cosf(theta * M_PI / 180);
+        float tempY, tempZ;
+        tempY = a.y;
+        tempZ = a.z;
+
+        a.y = tempY * cos - tempZ * sin;
+        a.z = tempY * sin + tempZ * cos;
+    };
+
+    void rotateY(const Vector& a, float theta, Vector& out) {
+        float sin = sinf(theta * M_PI / 180);
+        float cos = cosf(theta * M_PI / 180);
+
+        out.x = a.x * cos + a.z * sin;
+        out.y = a.y;
+        out.z = -a.x * sin + a.z * cos;
+    };
+
+    void rotateY(Vector& a, float theta) {
+        float sin = sinf(theta * M_PI / 180);
+        float cos = cosf(theta * M_PI / 180);
+
+        float tempX, tempZ;
+        tempX = a.x;
+        tempZ = a.z;
+
+        a.x = tempX * cos + tempZ * sin;
+        a.z = -tempX * sin + tempZ * cos;
+    };
+
+    void rotateZ(const Vector& a, float theta, Vector& out) {
+        float sin = sinf(theta * M_PI / 180);
+        float cos = cosf(theta * M_PI / 180);
+
+        out.x = a.x * cos - a.y * sin;
+        out.y = a.x * sin + a.y * cos;
+        out.z = a.z;
+    };
+
+    void rotateZ(Vector& a, float theta) {
+        float sin = sinf(theta * M_PI / 180);
+        float cos = cosf(theta * M_PI / 180);
+
+        float tempX, tempY;
+        tempX = a.x;
+        tempY = a.y;
+
+        a.x = tempX * cos - tempY * sin;
+        a.y = tempX * sin + tempY * cos;
     };
 };
