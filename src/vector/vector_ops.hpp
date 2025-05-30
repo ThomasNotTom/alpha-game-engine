@@ -11,4 +11,13 @@ namespace VectorOps {
 
     void crossProduct(const Vector& a, const Vector& b, Vector& out);
     void crossProduct(Vector& a, const Vector& b);
+
+    void rotateX(const Vector& a, float theta, Vector& out);
+    void rotateX(Vector& a, float theta);
+
+    void rotateY(const Vector& a, float theta, Vector& out);
+    void rotateY(Vector& a, float theta);
+
+    void rotateZ(const Vector& a, float theta, Vector& out);
+    void rotateZ(Vector& a, float theta);
 };
