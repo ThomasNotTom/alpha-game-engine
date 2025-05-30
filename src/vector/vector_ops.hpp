@@ -2,4 +2,7 @@
 
 namespace VectorOps {
     float dotProduct(const Vector& a, const Vector& b);
+
+    void add(const Vector& a, const Vector& b, Vector& out);
+    void add(Vector& a, const Vector& b);
 }
