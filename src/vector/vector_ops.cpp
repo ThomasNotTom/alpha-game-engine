@@ -3,8 +3,6 @@
 #include "./vector_ops.hpp"
 
 namespace VectorOps {
-    const float EPSILON = 0.0001;
-
     float dotProduct(const Vector& a, const Vector& b) {
         return (a.x * b.x) + (a.y * b.y) + (a.z * b.z);
     };

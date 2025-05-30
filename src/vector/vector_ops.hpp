@@ -1,6 +1,8 @@
 #include "./vector.hpp"
 
 namespace VectorOps {
+    const float EPSILON = 0.0001;
+
     float dotProduct(const Vector& a, const Vector& b);
 
     void add(const Vector& a, const Vector& b, Vector& out);
