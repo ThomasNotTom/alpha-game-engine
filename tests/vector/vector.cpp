@@ -122,14 +122,16 @@ TEST_CASE("Vector normalise works (in-place)", "[vector_normalise, in_place]") {
     Vector v1 = {1, 1, 1};
     Vector parallel = {2, 2, 2};
     VectorOps::normalise(v1);
-    REQUIRE(VectorOps::isParallel(v1, parallel) && VectorOps::length(v1) == 1);
+    bool isNormalised = VectorOps::isParallel(v1, parallel) && VectorOps::_floatClose(VectorOps::length(v1), 1);
+    REQUIRE(isNormalised);
 }
 
 TEST_CASE("Vector normalise works (out-of-place)", "[vector_normalise, out_of_place]") {
     Vector v1 = {1, 1, 1};
     Vector normalised;
     VectorOps::normalise(v1, normalised);
-    REQUIRE(VectorOps::isParallel(v1, normalised) && VectorOps::length(normalised) == 1);
+    bool isNormalised = VectorOps::isParallel(v1, normalised) && VectorOps::_floatClose(VectorOps::length(normalised), 1);
+    REQUIRE(isNormalised);
 }
 
 // Testing VectorOps::multiply
