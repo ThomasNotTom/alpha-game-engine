@@ -8,4 +8,4 @@ namespace VectorOps {
 
     void multiply(const Vector& a, float k, Vector& out);
     void multiply(Vector& a, float k);
-}
+};
