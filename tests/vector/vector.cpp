@@ -67,3 +67,17 @@ TEST_CASE("Vector dot product works", "[vector_dot]") {
     const Vector v2 = {1, 1, 1};
     REQUIRE(VectorOps::dotProduct(v1, v2) == 3);
 }
+
+// Testing VectorOps::rotateX
+TEST_CASE("Vector rotate x product works (in-place)", "[vector_dot]") {
+    Vector v1 = {0, 1, 0};
+    VectorOps::rotateX(v1, 90);
+    REQUIRE(VectorOps::isClose(v1, {0, 0, 1}));
+}
+
+TEST_CASE("Vector rotate x product works (out-of-place)", "[vector_dot]") {
+    const Vector v1 = {0, 1, 0};
+    Vector rotated;
+    VectorOps::rotateX(v1, 90, rotated);
+    REQUIRE(VectorOps::isClose(rotated, {0, 0, 1}));
+}
