@@ -65,6 +65,12 @@ namespace VectorOps {
         out.z = a.z - b.z;
     };
 
+    /**
+     * @brief Subtracts a vector from another vector.
+     *
+     * @param a The vector being subtraced from.
+     * @param b The other vector.
+     */
     void subtract(Vector& a, const Vector& b) {
         a.x -= b.x;
         a.y -= b.y;
