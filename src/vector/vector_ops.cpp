@@ -28,7 +28,7 @@ namespace VectorOps {
     };
 
     /**
-     * @brief Adds two vectors, and places it into another vector.
+     * @brief Adds two vectors, and places the result into another vector.
      *
      * @param a The first vector.
      * @param b The second vector.
@@ -53,7 +53,7 @@ namespace VectorOps {
     };
 
     /**
-     * @brief Subtracts two vectors, and places it into another vector.
+     * @brief Subtracts two vectors, and places the result into another vector.
      *
      * @param a The first vector.
      * @param b The second vector.
