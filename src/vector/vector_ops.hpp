@@ -23,4 +23,7 @@ namespace VectorOps {
 
     float lengthSquared(const Vector& a);
     float length(const Vector& a);
+
+    void normalise(const Vector& a, Vector& out);
+    void normalise(Vector& a);
 };
