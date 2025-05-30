@@ -40,6 +40,12 @@ namespace VectorOps {
         out.z = a.z + b.z;
     };
 
+    /**
+     * @brief Adds a vector to another vector.
+     *
+     * @param a The vector being added to.
+     * @param b The other vector.
+     */
     void add(Vector& a, const Vector& b) {
         a.x += b.x;
         a.y += b.y;
