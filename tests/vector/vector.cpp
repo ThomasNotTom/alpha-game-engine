@@ -48,3 +48,9 @@ TEST_CASE("Vector subtraction works (out-of-place)", "[vector_sub, out_of_place]
     VectorOps::subtract(v1, v2, v3);
     REQUIRE(VectorOps::equals(v3, {1, 1, 1}));
 }
+
+// Testing VectorOps::lengthSquared
+TEST_CASE("Vector length squared works (in-place)", "[vector_length_sqrd]") {
+    const Vector v1 = {2, 3, 6};
+    REQUIRE(VectorOps::lengthSquared(v1) == 49);
+}
