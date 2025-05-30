@@ -43,6 +43,12 @@ namespace VectorOps {
         a.z *= k;
     };
 
+    float isParallel(const Vector& a, const Vector& b) {
+        float dot = dotProduct(a, b);
+        float product = length(a) * length(b);
+        return dot == product;
+    };
+
     void crossProduct(const Vector& a, const Vector& b, Vector& out) {
         out.x = (a.y * b.z) - (a.z * b.y);
         out.y = (a.z * b.x) - (a.x * b.z);
