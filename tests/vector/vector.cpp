@@ -60,3 +60,10 @@ TEST_CASE("Vector length works", "[vector_length]") {
     const Vector v1 = {2, 3, 6};
     REQUIRE(VectorOps::length(v1) == 7);
 }
+
+// Testing VectorOps::dotProduct
+TEST_CASE("Vector dot product works", "[vector_dot]") {
+    const Vector v1 = {1, 1, 1};
+    const Vector v2 = {1, 1, 1};
+    REQUIRE(VectorOps::dotProduct(v1, v2) == 3);
+}
