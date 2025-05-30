@@ -19,6 +19,18 @@ namespace VectorOps {
         a.z += b.z;
     };
 
+    void subtract(const Vector& a, const Vector& b, Vector& out) {
+        out.x = a.x - b.x;
+        out.y = a.y - b.y;
+        out.z = a.z - b.z;
+    };
+
+    void subtract(Vector& a, const Vector& b) {
+        a.x -= b.x;
+        a.y -= b.y;
+        a.z -= b.z;
+    };
+
     void multiply(const Vector& a, float k, Vector& out) {
         out.x = a.x * k;
         out.y = a.y * k;
