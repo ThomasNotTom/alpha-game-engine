@@ -1,3 +1,5 @@
 #include "./vector.hpp"
 
-namespace VectorOps {}
+namespace VectorOps {
+    float dotProduct(const Vector& a, const Vector& b);
+}
