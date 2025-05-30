@@ -54,3 +54,9 @@ TEST_CASE("Vector length squared works (in-place)", "[vector_length_sqrd]") {
     const Vector v1 = {2, 3, 6};
     REQUIRE(VectorOps::lengthSquared(v1) == 49);
 }
+
+// Testing VectorOps::length
+TEST_CASE("Vector length works (in-place)", "[vector_length]") {
+    const Vector v1 = {2, 3, 6};
+    REQUIRE(VectorOps::length(v1) == 7);
+}
