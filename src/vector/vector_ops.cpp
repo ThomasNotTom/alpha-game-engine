@@ -3,6 +3,8 @@
 #include "./vector_ops.hpp"
 
 namespace VectorOps {
+    const float EPSILON = 0.0001;
+
     float dotProduct(const Vector& a, const Vector& b) {
         return (a.x * b.x) + (a.y * b.y) + (a.z * b.z);
     };
@@ -136,4 +138,16 @@ namespace VectorOps {
     void normalise(Vector& a) {
         multiply(a, 1 / length(a), a);
     };
+
+    bool equals(const Vector& a, const Vector& b) {
+        return a.x == b.x && a.y == b.y && a.z == b.z;
+    }
+
+    bool isClose(const Vector& a, const Vector& b) {
+        Vector difference;
+        subtract(a, b, difference);
+        return abs(difference.x) <= EPSILON &&
+               abs(difference.y) <= EPSILON &&
+               abs(difference.z) <= EPSILON;
+    }
 };
