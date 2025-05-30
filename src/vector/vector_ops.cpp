@@ -51,7 +51,7 @@ namespace VectorOps {
     float isParallel(const Vector& a, const Vector& b) {
         float dot = dotProduct(a, b);
         float product = length(a) * length(b);
-        return dot == product;
+        return _floatClose(dot, product);
     };
 
     void crossProduct(const Vector& a, const Vector& b, Vector& out) {
