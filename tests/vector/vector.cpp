@@ -109,3 +109,10 @@ TEST_CASE("Vector rotate z works (out-of-place)", "[vector_rot_z, out_of_place]"
     VectorOps::rotateZ(v1, 90, rotated);
     REQUIRE(VectorOps::isClose(rotated, {0, 1, 0}));
 }
+
+// Testing VectorOps::isParallel
+TEST_CASE("Vector parallel check works (in-place)", "[vector_is_parallel]") {
+    Vector v1 = {1, 1, 1};
+    Vector v2 = {2, 2, 2};
+    REQUIRE(VectorOps::isParallel(v1, v2));
+}
