@@ -52,6 +52,13 @@ namespace VectorOps {
         a.z += b.z;
     };
 
+    /**
+     * @brief Subtracts two vectors, and places it into another vector.
+     *
+     * @param a The first vector.
+     * @param b The second vector.
+     * @param out The output vector.
+     */
     void subtract(const Vector& a, const Vector& b, Vector& out) {
         out.x = a.x - b.x;
         out.y = a.y - b.y;
