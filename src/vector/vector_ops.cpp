@@ -16,6 +16,13 @@ namespace VectorOps {
         return diff <= EPSILON;
     }
 
+    /**
+     * @brief Calculates the dot product of two vectors.
+     *
+     * @param a The first vector.
+     * @param b The second vector.
+     * @return float The dot product.
+     */
     float dotProduct(const Vector& a, const Vector& b) {
         return (a.x * b.x) + (a.y * b.y) + (a.z * b.z);
     };
