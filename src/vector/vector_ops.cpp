@@ -116,4 +116,12 @@ namespace VectorOps {
     float length(const Vector& a) {
         return sqrtf(lengthSquared(a));
     };
+
+    void normalise(const Vector& a, Vector& out) {
+        multiply(a, 1 / length(a), out);
+    };
+
+    void normalise(Vector& a) {
+        multiply(a, 1 / length(a), a);
+    };
 };
