@@ -14,7 +14,7 @@ namespace VectorOps {
     void multiply(const Vector& a, float k, Vector& out);
     void multiply(Vector& a, float k);
 
-    float getMultiplier(const Vector& a, const Vector& b);
+    float isParallel(const Vector& a, const Vector& b);
 
     void crossProduct(const Vector& a, const Vector& b, Vector& out);
     void crossProduct(Vector& a, const Vector& b);
