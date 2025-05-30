@@ -149,3 +149,19 @@ TEST_CASE("Vector multiply works (out-of-place)", "[vector_multiply, out_of_plac
     VectorOps::multiply(v1, k, scaled);
     REQUIRE(VectorOps::equals(scaled, {2, 2, 2}));
 }
+
+// Testing VectorOps::crossProduct
+TEST_CASE("Vector cross product works (in-place)", "[vector_cross, in_place]") {
+    Vector v1 = {1, 0, 0};
+    Vector v2 = {0, 1, 0};
+    VectorOps::crossProduct(v1, v2);
+    REQUIRE(VectorOps::equals(v1, {0, 0, 1}));
+}
+
+TEST_CASE("Vector cross product works (out-of-place)", "[vector_cross, out_of_place]") {
+    Vector v1 = {1, 0, 0};
+    Vector v2 = {0, 1, 0};
+    Vector perpendicular;
+    VectorOps::crossProduct(v1, v2, perpendicular);
+    REQUIRE(VectorOps::equals(perpendicular, {0, 0, 1}));
+}
