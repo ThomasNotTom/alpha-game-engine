@@ -32,3 +32,19 @@ TEST_CASE("Vector addition works (out-of-place)", "[vector_add, out_of_place]") 
     VectorOps::add(v1, v2, v3);
     REQUIRE(VectorOps::equals(v3, {3, 3, 3}));
 }
+
+// Testing VectorOps::subtract
+TEST_CASE("Vector subtraction works (in-place)", "[vector_sub, in_place]") {
+    Vector v1 = {3, 3, 3};
+    const Vector v2 = {2, 2, 2};
+    VectorOps::subtract(v1, v2);
+    REQUIRE(VectorOps::equals(v1, {1, 1, 1}));
+}
+
+TEST_CASE("Vector subtraction works (out-of-place)", "[vector_sub, out_of_place]") {
+    const Vector v1 = {3, 3, 3};
+    const Vector v2 = {2, 2, 2};
+    Vector v3;
+    VectorOps::subtract(v1, v2, v3);
+    REQUIRE(VectorOps::equals(v3, {1, 1, 1}));
+}
