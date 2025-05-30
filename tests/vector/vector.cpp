@@ -81,3 +81,17 @@ TEST_CASE("Vector rotate x works (out-of-place)", "[vector_rot_x, out_of_place]"
     VectorOps::rotateX(v1, 90, rotated);
     REQUIRE(VectorOps::isClose(rotated, {0, 0, 1}));
 }
+
+// Testing VectorOps::rotateY
+TEST_CASE("Vector rotate y works (in-place)", "[vector_rot_y, in_place]") {
+    Vector v1 = {0, 0, 1};
+    VectorOps::rotateY(v1, 90);
+    REQUIRE(VectorOps::isClose(v1, {1, 0, 0}));
+}
+
+TEST_CASE("Vector rotate y works (out-of-place)", "[vector_rot_y, out_of_place]") {
+    const Vector v1 = {0, 0, 1};
+    Vector rotated;
+    VectorOps::rotateY(v1, 90, rotated);
+    REQUIRE(VectorOps::isClose(rotated, {1, 0, 0}));
+}
