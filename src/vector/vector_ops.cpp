@@ -179,6 +179,13 @@ namespace VectorOps {
         a.z = tempY * sin + tempZ * cos;
     };
 
+    /**
+     * @brief Calculates a vector rotated about the y-axis, and places the result into another vector.
+     *
+     * @param a The vector to be rotated.
+     * @param theta The angle (degrees) to rotate.
+     * @param out The output vector.
+     */
     void rotateY(const Vector& a, float theta, Vector& out) {
         float sin = sinf(theta * M_PI / 180);
         float cos = cosf(theta * M_PI / 180);
