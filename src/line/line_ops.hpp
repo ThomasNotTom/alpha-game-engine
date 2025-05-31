@@ -3,6 +3,7 @@
 #include "./line.hpp"
 
 namespace LineOps {
+    bool equals(const Line& a, const Line& b);
     /**
      * @brief Get the finish vector of the line.
      *
