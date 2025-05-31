@@ -6,6 +6,10 @@ namespace LineOps {
         return VectorOps::equals(a.base, b.base) && VectorOps::equals(a.extension, b.extension);
     }
 
+    bool isClose(const Line& a, const Line& b) {
+        return VectorOps::isClose(a.base, b.base) && VectorOps::isClose(a.extension, b.extension);
+    }
+
     void getFinish(const Line& line, Vector& out) {
         VectorOps::add(line.base, line.extension, out);
     };
