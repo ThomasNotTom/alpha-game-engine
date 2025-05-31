@@ -247,6 +247,12 @@ namespace VectorOps {
         a.y = tempX * sin + tempY * cos;
     };
 
+    /**
+     * @brief Calculates the length squared of a vector.
+     *
+     * @param a The vector.
+     * @return float The length squared of the vector.
+     */
     float lengthSquared(const Vector& a) {
         return (a.x * a.x) + (a.y * a.y) + (a.z * a.z);
     }
