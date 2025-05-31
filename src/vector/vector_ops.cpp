@@ -195,6 +195,12 @@ namespace VectorOps {
         out.z = -a.x * sin + a.z * cos;
     };
 
+    /**
+     * @brief Rotates a vector about the y-axis.
+     *
+     * @param a The vector to be rotated.
+     * @param theta The angle (degrees) to rotate.
+     */
     void rotateY(Vector& a, float theta) {
         float sin = sinf(theta * M_PI / 180);
         float cos = cosf(theta * M_PI / 180);
