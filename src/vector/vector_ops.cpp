@@ -90,6 +90,12 @@ namespace VectorOps {
         out.z = a.z * k;
     };
 
+    /**
+     * @brief Multiplies a vector by a scalar.
+     *
+     * @param a The vector being multiplied.
+     * @param k The scalar.
+     */
     void multiply(Vector& a, float k) {
         a.x *= k;
         a.y *= k;
