@@ -13,6 +13,14 @@ namespace LineOps {
      */
     bool equals(const Line& a, const Line& b);
 
+    /**
+     * @brief Determines whether two lines are close.
+     *
+     * @param a The first line.
+     * @param b The second line.
+     * @return true The lines are close.
+     * @return false The lines are not close.
+     */
     bool isClose(const Line& a, const Line& b);
 
     /**
