@@ -13,7 +13,7 @@ namespace LineOps {
      */
     bool equals(const Line& a, const Line& b);
 
-    bool close(const Line& a, const Line& b);
+    bool isClose(const Line& a, const Line& b);
 
     /**
      * @brief Get the finish vector of the line.
