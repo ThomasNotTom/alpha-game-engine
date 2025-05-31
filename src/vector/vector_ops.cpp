@@ -117,6 +117,13 @@ namespace VectorOps {
         return _floatClose(dot, product);
     };
 
+    /**
+     * @brief Calculates the cross product of two vectors, and places the result into another vector.
+     *
+     * @param a The first vector.
+     * @param b The second vector.
+     * @param out The output vector.
+     */
     void crossProduct(const Vector& a, const Vector& b, Vector& out) {
         out.x = (a.y * b.z) - (a.z * b.y);
         out.y = (a.z * b.x) - (a.x * b.z);
