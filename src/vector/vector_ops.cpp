@@ -267,6 +267,12 @@ namespace VectorOps {
         return sqrtf(lengthSquared(a));
     };
 
+    /**
+     * @brief Calculate the normal of a vector, and places the result into another vector.
+     *
+     * @param a The vector.
+     * @param out The output vector.
+     */
     void normalise(const Vector& a, Vector& out) {
         multiply(a, 1 / length(a), out);
     };
