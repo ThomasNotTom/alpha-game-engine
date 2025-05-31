@@ -1,6 +1,9 @@
 #include "./vector.hpp"
 
 namespace VectorOps {
+    /**
+     * @brief A small threshold value.
+     */
     const float EPSILON = 0.0001;
 
     /**
