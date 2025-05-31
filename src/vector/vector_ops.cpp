@@ -130,6 +130,12 @@ namespace VectorOps {
         out.z = (a.x * b.y) - (a.y * b.x);
     };
 
+    /**
+     * @brief Calculates the cross product of a vector onto another vector.
+     *
+     * @param a The first vector.
+     * @param b The second vector.
+     */
     void crossProduct(Vector& a, const Vector& b) {
         float tempX = a.x;
         float tempY = a.y;
