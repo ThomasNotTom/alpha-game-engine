@@ -77,6 +77,13 @@ namespace VectorOps {
         a.z -= b.z;
     };
 
+    /**
+     * @brief Multiplies a vector by a scalar, and places the result into another vector.
+     *
+     * @param a The vector being multiplied.
+     * @param k The scalar.
+     * @param out The output vector.
+     */
     void multiply(const Vector& a, float k, Vector& out) {
         out.x = a.x * k;
         out.y = a.y * k;
