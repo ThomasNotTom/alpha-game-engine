@@ -257,6 +257,12 @@ namespace VectorOps {
         return (a.x * a.x) + (a.y * a.y) + (a.z * a.z);
     }
 
+    /**
+     * @brief Calculates the length of a vector.
+     *
+     * @param a The vector.
+     * @return float The length of the vector.
+     */
     float length(const Vector& a) {
         return sqrtf(lengthSquared(a));
     };
