@@ -78,7 +78,7 @@ namespace VectorOps {
     };
 
     /**
-     * @brief Multiplies a vector by a scalar, and places the result into another vector.
+     * @brief Multiplies a vector and a scalar, and places the result into another vector.
      *
      * @param a The vector being multiplied.
      * @param k The scalar.
