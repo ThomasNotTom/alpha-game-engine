@@ -5,4 +5,11 @@ namespace Logger {
         TERMINAL,
         FILE
     };
+
+    enum Level : uint8_t {
+        LOG,
+        WARNING,
+        ERROR,
+        SUCCESS
+    };
 };
