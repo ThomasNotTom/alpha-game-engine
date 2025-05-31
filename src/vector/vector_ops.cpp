@@ -102,7 +102,16 @@ namespace VectorOps {
         a.z *= k;
     };
 
-    float isParallel(const Vector& a, const Vector& b) {
+    /**
+     * @brief Determines whether two vectors are parallel.
+     *
+     * @param a The first vector.
+     * @param b The second vector.
+     *
+     * @return true The vectors are parallel.
+     * @return false The vectors are not parallel.
+     */
+    bool isParallel(const Vector& a, const Vector& b) {
         float dot = dotProduct(a, b);
         float product = length(a) * length(b);
         return _floatClose(dot, product);
