@@ -298,6 +298,14 @@ namespace VectorOps {
         return a.x == b.x && a.y == b.y && a.z == b.z;
     }
 
+    /**
+     * @brief Determines whether two vectors are nearly the same.
+     *
+     * @param a The first vector.
+     * @param b The second vector.
+     * @return true The vectors are close.
+     * @return false The vectors are not close.
+     */
     bool isClose(const Vector& a, const Vector& b) {
         return _floatClose(a.x, b.x) &&
                _floatClose(a.y, b.y) &&
