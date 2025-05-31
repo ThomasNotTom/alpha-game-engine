@@ -277,6 +277,11 @@ namespace VectorOps {
         multiply(a, 1 / length(a), out);
     };
 
+    /**
+     * @brief Normalise a vector.
+     *
+     * @param a The vector.
+     */
     void normalise(Vector& a) {
         multiply(a, 1 / length(a), a);
     };
