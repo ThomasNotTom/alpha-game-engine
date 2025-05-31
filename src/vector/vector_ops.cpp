@@ -286,6 +286,14 @@ namespace VectorOps {
         multiply(a, 1 / length(a), a);
     };
 
+    /**
+     * @brief Determines whether two vectors are equal.
+     *
+     * @param a The first vector.
+     * @param b The second vector.
+     * @return true The vectors are equal.
+     * @return false The vectors are not equal.
+     */
     bool equals(const Vector& a, const Vector& b) {
         return a.x == b.x && a.y == b.y && a.z == b.z;
     }
