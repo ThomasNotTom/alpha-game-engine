@@ -5,6 +5,13 @@
 #include "./logger.hpp"
 
 namespace Logger {
+    /**
+     * @brief Private method for printing text with a coloured prefix.
+     *
+     * @param colour The colour of the prefix.
+     * @param prefix The prefix text.
+     * @param text The text to print.
+     */
     void _prettyPrint(const char* colour, std::string prefix, std::string text);
     void _print(std::string text);
     void _printToTerminal(std::string text);
