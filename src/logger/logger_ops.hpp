@@ -10,6 +10,8 @@ namespace Logger {
     void _printToTerminal(std::string text);
     void _printToFile(std::string text);
 
+    void init(Mode mode);
+
     void log(std::string message);
     void warning(std::string message);
     void error(std::string message);
