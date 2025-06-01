@@ -37,5 +37,11 @@ namespace Logger {
      * @param message The message to log.
      */
     void error(std::string message);
+
+    /**
+     * @brief Logs a message with the SUCCESS prefix.
+     *
+     * @param message The message to log.
+     */
     void success(std::string message);
 };
