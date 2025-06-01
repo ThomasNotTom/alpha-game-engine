@@ -52,4 +52,20 @@ namespace Logger {
     void _printToFile(std::string text) {
         outputFile << text << '\n';
     }
+
+    void log(std::string text) {
+        _prettyPrint(Colours::RESET, "LOG", text);
+    }
+
+    void warning(std::string text) {
+        _prettyPrint(Colours::YELLOW, "WARNING", text);
+    }
+
+    void error(std::string text) {
+        _prettyPrint(Colours::RED, "ERROR", text);
+    }
+
+    void Cuccess(std::string text) {
+        _prettyPrint(Colours::GREEN, "SUCCESS", text);
+    }
 };
