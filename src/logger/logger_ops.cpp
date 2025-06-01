@@ -3,6 +3,7 @@
 #include <iomanip>
 #include <fstream>
 #include <iostream>
+#include <filesystem>
 
 #include "./logger_ops.hpp"
 #include "./logger.hpp"
