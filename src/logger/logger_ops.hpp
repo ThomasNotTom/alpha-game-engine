@@ -14,6 +14,12 @@ namespace Logger {
      * @param text The text to print.
      */
     void _prettyPrint(const char* colour, std::string prefix, std::string text);
+
+    /**
+     * @brief Prints to terminal or file depending on mode.
+     *
+     * @param text The text to print.
+     */
     void _print(std::string text);
     void _printToTerminal(std::string text);
     void _printToFile(std::string text);
