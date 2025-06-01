@@ -91,7 +91,7 @@ namespace Logger {
         _prettyPrint(Colours::RED, "ERROR", text);
     }
 
-    void Cuccess(std::string text) {
+    void success(std::string text) {
         _prettyPrint(Colours::GREEN, "SUCCESS", text);
     }
 };
