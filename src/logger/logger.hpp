@@ -6,12 +6,5 @@ namespace Logger {
         FILE
     };
 
-    enum Level : uint8_t {
-        LOG,
-        WARNING,
-        ERROR,
-        SUCCESS
-    };
-
     static Mode mode = Mode::TERMINAL;
 };
