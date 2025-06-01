@@ -12,4 +12,6 @@ namespace Logger {
         ERROR,
         SUCCESS
     };
+
+    static Mode mode = Mode::TERMINAL;
 };
