@@ -23,6 +23,12 @@ namespace Logger {
      * @param message The message to log.
      */
     void log(std::string message);
+
+    /**
+     * @brief Logs a message with the WARNING prefix.
+     *
+     * @param message The message to log.
+     */
     void warning(std::string message);
     void error(std::string message);
     void success(std::string message);
