@@ -28,6 +28,12 @@ namespace Logger {
      * @param text The text to print.
      */
     void _printToTerminal(std::string text);
+
+    /**
+     * @brief Prints to file.
+     *
+     * @param text The text to print.
+     */
     void _printToFile(std::string text);
 
     /**
