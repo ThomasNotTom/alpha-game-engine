@@ -17,6 +17,11 @@ namespace Logger {
      */
     void init(Mode mode);
 
+    /**
+     * @brief Logs a message with the LOG prefix.
+     *
+     * @param message The message to log.
+     */
     void log(std::string message);
     void warning(std::string message);
     void error(std::string message);
