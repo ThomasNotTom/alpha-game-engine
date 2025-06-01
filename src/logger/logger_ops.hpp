@@ -6,7 +6,8 @@
 
 namespace Logger {
     /**
-     * @brief Private method for printing text with a coloured prefix.
+     * @brief Private method for translating text with a coloured prefix to a printable string and passing it
+     * to the private print method.
      *
      * @param colour The colour of the prefix.
      * @param prefix The prefix text.
