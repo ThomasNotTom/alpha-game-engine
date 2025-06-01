@@ -20,4 +20,5 @@ namespace Logger {
 
     inline Mode mode = TERMINAL;
     inline std::ofstream outputFile;
+    inline bool initialised = false;
 };

@@ -54,7 +54,7 @@ namespace Logger {
         outputFile << text << '\n';
     }
 
-    void init(Mode m) {
+    void _init(Mode m) {
         mode = m;
 
         if (mode == Mode::TERMINAL) {
@@ -67,6 +67,16 @@ namespace Logger {
         std::ostringstream name;
         name << std::put_time(std::localtime(&nowTime), "%Y-%m-%d_%H:%M:%S");
         outputFile.open("../logs/" + name.str() + ".txt", std::ios::app);
+    }
+
+    void init(Mode m) {
+        if (initialised) {
+            return;
+        }
+
+        _init(m);
+
+        initialised = true;
     }
 
     void log(std::string text) {
