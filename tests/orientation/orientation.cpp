@@ -6,9 +6,13 @@
 #include "../../src/vector/vector_ops.hpp"
 
 // Testing OrientationOps::getUnitVector
-TEST_CASE("Orientation get unit vector equals works", "[orientation_get_unit_vec, in_place]") {
-    const Orientation orientation = {45, 45};
+TEST_CASE("Orientation get unit vector equals works", "[orientation_get_unit_vec, out_of_place]") {
+    const float HALF = 1.0f / 2.0f;
+    const float ONE_OVER_SQRT_TWO = 1.0f / sqrtf(2.0f);
+    const int DIAGONAL_ANGLE = 45;
+
+    const Orientation orientation = {DIAGONAL_ANGLE, DIAGONAL_ANGLE};
     Vector unitVector;
     OrientationOps::getUnitVector(orientation, unitVector);
-    REQUIRE(VectorOps::isClose(unitVector, {0.5f, 0.70710678118f, 0.5f}));
+    REQUIRE(VectorOps::isClose(unitVector, {HALF, ONE_OVER_SQRT_TWO, HALF}));
 }
