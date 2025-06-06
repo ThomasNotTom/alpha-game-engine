@@ -1,5 +1,10 @@
 #pragma once
 
-struct Camera {
+#include "../vector/vector.hpp"
+#include "../orientation/orientation.hpp"
 
+struct Camera {
+    Vector position;
+    Orientation orientation;
+    float fieldOfView;
 };
